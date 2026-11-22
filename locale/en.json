@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Agents",
+    "description": "A persistent sidebar panel for reusable agent roles: prompt, tools, model, ready to invoke in one line."
+  }
+}
