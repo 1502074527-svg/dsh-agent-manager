@@ -23,7 +23,7 @@
  * 设计依据见 preview/设计依据.md（每个数值都有外部来源与证据强度标注）。
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-agent-manager',
+  id: 'dsh-custom-subagents',
   factory(require) {
     const React = require('react')
     const ReactDOM = require('react-dom')

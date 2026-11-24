@@ -1,8 +1,8 @@
-# 自定义子智能体（dsh-agent-manager）
+# 自定义子智能体（dsh-custom-subagents）
 
 左侧栏常驻的面板：用 Markdown 定义可复用的智能体角色，选好工具与模型，运行时注册为 DSH 预设，一句话就能叫它出来干活。
 
-> **名字说明**：面板里仍然叫「智能体」，实际使用不变；插件市场里显示为 **自定义子智能体**，用于和几个同名的 `dsh-agent-manager` 仓库区分。仓库名与包名保持 `dsh-agent-manager`（已收录，条目按仓库地址绑定）。
+> **名字说明**：面板里仍然叫「智能体」，实际使用不变；插件市场里显示为 **自定义子智能体**，用于和几个同名的 `dsh-agent-manager` 仓库区分。仓库与包名也已改为 `dsh-custom-subagents`，彻底避开同名仓库。
 
 ![首页](assets/screenshots/home-light.png)
 

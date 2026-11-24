@@ -1,4 +1,4 @@
 - insert:
     - id: agent-manager
-      name: 'dsh-agent-manager'
+      name: 'dsh-custom-subagents'
       config: {}

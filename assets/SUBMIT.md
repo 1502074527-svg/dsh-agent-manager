@@ -13,15 +13,15 @@
 
 ## 1. 要提的那一个文件
 
-路径：`data/plugins/1502074527-svg__dsh-agent-manager.yml`
+路径：`data/plugins/1502074527-svg__dsh-custom-subagents.yml`
 
 内容就是本目录的 `assets/submission.yml`（已按文档写过：`description.en` 以句号结尾、含冒号已用单引号、`zh` 提供、`icon` 指向 raw 地址）。
 
 ## 2. 步骤
 
 1. 在 `awesome-dsh-plugin/awesome-dsh-plugin` 提 PR，只**新增**上面那个文件；不要改 README（由 `data/plugins/*.yml` 生成）。
-2. 分支名建议 `add/dsh-agent-manager`。
-3. PR 标题：`Add 1502074527-svg/dsh-agent-manager`。
+2. 分支名建议 `rename/dsh-custom-subagents`。
+3. PR 标题：`Rename entry to 1502074527-svg/dsh-custom-subagents`。
 4. CI 通过是前置条件，不是结论；维护者会读仓库，核对描述与代码是否一致。
 
 ## 3. 描述与代码的对应点（防止被打回）
