@@ -25,9 +25,13 @@
 | --- | --- |
 | ![暗色首页](assets/screenshots/home-dark.png) | ![窄栏](assets/screenshots/narrow-light.png) |
 
-| 详情 | 编辑器 | 风格库弹层 |
+| 详情 | 编辑器 | 图标页（30 款头像） |
 | --- | --- | --- |
-| ![详情](assets/screenshots/detail-light.png) | ![编辑器](assets/screenshots/editor-role-edit-light.png) | ![风格库](assets/screenshots/editor-styles-light.png) |
+| ![详情](assets/screenshots/detail-light.png) | ![编辑器](assets/screenshots/editor-role-edit-light.png) | ![图标页](assets/screenshots/editor-logo-light.png) |
+
+| 风格库弹层 | 30 款头像一览 |
+| --- | --- |
+| ![风格库](assets/screenshots/editor-styles-light.png) | ![30 款头像](assets/screenshots/logos-30.png) |
 
 ## 安装
 
