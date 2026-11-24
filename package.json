@@ -1,6 +1,6 @@
 {
   "name": "dsh-custom-subagents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "左侧栏常驻的「智能体」面板：用 Markdown 定义可复用的智能体角色，运行时注册为 DSH 预设。",
@@ -40,7 +40,11 @@
     "react-dom": ">=18"
   },
   "peerDependenciesMeta": {
-    "react": { "optional": true },
-    "react-dom": { "optional": true }
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   }
 }

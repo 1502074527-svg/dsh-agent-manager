@@ -993,7 +993,9 @@ window.__ModuleLoader__.load({
             }, '点击下方切换')),
           h('div', { style: { minWidth: 180, flex: 1 } },
             h('div', { style: { fontSize: T.font.bodyLg, fontWeight: 600 } }, selected ? (logos.find((item) => item.id === selected)?.label ?? `图标 ${selected}`) : '默认几何徽记'),
-            h('div', { style: { ...S.muted, marginTop: T.space.s2, lineHeight: 1.7 } }, '共 30 款透明图标，点击大图或下方任意一款即可切换。'),
+            h('div', { style: { ...S.muted, marginTop: T.space.s2, lineHeight: 1.7 } }, selected
+              ? '共 30 款透明图标；新角色会先随机挑一款，点下方任意一款即可换。'
+              : '共 30 款透明图标；当前是默认几何徽记，点下方任意一款即可换。'),
             current !== ''
               ? h(Btn, { kind: 'ghost', onClick: () => { props.set({ avatar: '' }) }, style: { marginTop: T.space.s2, paddingLeft: 0 } }, '恢复默认徽记')
               : null)),
@@ -2404,6 +2406,11 @@ window.__ModuleLoader__.load({
      * 中文会被整段丢掉，所以纯中文名会退化成带时间戳的兜底值——这是有意为之：
      * 代号只是文件名，用户可读性由 title 承担。
      */
+    /* 新角色的初始头像：从 30 款里随机挑一款。模板若自己声明了 avatar 就照办；
+       用户之后可以在 04 图标页换成任意一款，或「恢复默认徽记」用几何徽记。 */
+    const LOGO_VARIANT_COUNT = 30
+    const randomLogoAvatar = () => `logo-${String(1 + Math.floor(Math.random() * LOGO_VARIANT_COUNT)).padStart(2, '0')}`
+
     let slugCounter = 0
     function slugFor(source) {
       const base = String(source ?? '')
@@ -2442,6 +2449,8 @@ window.__ModuleLoader__.load({
         base.mode = 'agent'
       }
       if (base.name === '') base.name = slugFor(base.title || hint || 'agent')
+      // 新角色不要光秃秃的几何徽记：先随机给一款头像，用户想换再换。
+      if (base.avatar === '') base.avatar = randomLogoAvatar()
       // 模板自己声明的模块要跟着草稿走，否则 05 页无法按模板决定显示什么。
       const declared = Array.isArray(template?.modules) ? template.modules : null
       return { ...base, scope, modules: declared }
